@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ILPI - Início</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body id="ilpi-home">
+		<div class="container ilpi">
+			<header>
+				<h1>ILPI</h1>
+			</header>
+
+			<main class="slideshow-container">
+				<!-- Full-width images with number and caption text -->
+				<section class="mySlides fade">
+					<img src="imgs/slideilpi1.JPG" width="100%" height="600em" />
+				</section>
+
+				<section class="mySlides fade">
+					<img src="imgs/slideilpi2.jpg" width="100%" height="600em" />
+				</section>
+
+				<section class="mySlides fade">
+					<img src="imgs/slideilpi3.jpg" width="100%" height="600em" />
+				</section>
+
+				<!-- The dots/circles -->
+				<ul style="text-align: center" class="dots">
+					<li class="dot" onclick="currentSlide(1)"></li>
+					<li class="dot" onclick="currentSlide(2)"></li>
+					<li class="dot" onclick="currentSlide(3)"></li>
+				</ul>
+			</main>
+
+			<section id="mySidepanel" class="sidepanel">
+				<div class="options" id="opthome">
+					<a href="index.html">
+						<img
+							src="imgs/Logo IPSDP.png"
+							alt="Início - Sistema Interno Cesjo e Lar Calábria"
+							width="50px"
+							height="50px"
+							title="Voltar para o Início"
+						/>
+					</a>
+				</div>
+
+				<div class="options">
+					<a href="#">
+						<img
+							src="imgs/depositoilpi.png"
+							alt="Dispensa"
+							width="50px"
+							height="50px"
+							title="Dispensa"
+						/>
+					</a>
+				</div>
+				<div class="options">
+					<a href="#">
+						<img
+							src="imgs/relatoriosilpi.png"
+							alt="Relatórios"
+							width="50px"
+							height="50px"
+							title="Relatórios"
+						/>
+					</a>
+				</div>
+				<div class="options">
+					<a href="#">
+						<img
+							src="imgs/triagemilpi.png"
+							alt="Triagem"
+							width="50px"
+							height="50px"
+							title="Triagem"
+						/>
+					</a>
+				</div>
+				<button class="closebtn" onclick="closeNav()"><</button>
+			</section>
+
+			<button class="openbtn" onclick="openNav()">></button>
+		</div>
+
+		<script>
+			/* Set the width of the sidebar to 250px (show it) */
+			function openNav() {
+				document.getElementById("mySidepanel").style.width = "7vw";
+			}
+
+			/* Set the width of the sidebar to 0 (hide it) */
+			function closeNav() {
+				document.getElementById("mySidepanel").style.width = "0";
+			}
+		</script>
+
+		<script>
+			let slideIndex = 0;
+			showSlides();
+
+			function showSlides() {
+				let i;
+				let slides = document.getElementsByClassName("mySlides");
+				let dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {
+					slideIndex = 1;
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				setTimeout(showSlides, 10000); // Change image every 2 seconds
+			}
+		</script>
+	</body>
+</html>

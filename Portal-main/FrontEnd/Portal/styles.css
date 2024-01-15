@@ -1,0 +1,437 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+}
+
+body {
+	background-image: url("imgs/fundo.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.container {
+	position: absolute;
+	top: 5%;
+	bottom: 25%;
+	width: 65%;
+	height: 75vh;
+	background: #fefbe6;
+	box-shadow: 12px 8px 4px 2px rgba(0, 0, 0, 0.25);
+	border-radius: 6px;
+	margin: 20px;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+header {
+	display: flex;
+	margin: 2px;
+	flex-wrap: nowrap;
+	width: 100%;
+	height: 10%;
+}
+
+#titulo {
+	font-size: 25px;
+	padding-left: 25px;
+}
+
+#card-gallery {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 100%;
+	height: 80%;
+	z-index: 1;
+}
+
+#card-selector {
+	width: 100%;
+	height: auto;
+}
+
+#card-selector tr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 2em;
+}
+
+.card-element {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 0;
+	text-align: center;
+	width: 20%;
+	height: 60%;
+}
+
+.glass {
+	width: 100%;
+	height: 45vh;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px);
+	transform: translateY(3em);
+	transition: 0.5s;
+	text-align: center;
+}
+
+.glass img {
+	display: block;
+	width: 100%;
+	height: 55vh;
+	filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.3); /* Black see-through */
+	color: #f1f1f1;
+	width: 100%;
+	height: 100%;
+	transition: 1s ease;
+	opacity: 0;
+	color: white;
+	font-size: 25px;
+	padding: 0;
+	text-decoration: none;
+	cursor: default;
+}
+
+.glass:hover {
+	transform: translateY(-0.05em);
+}
+
+.glass:hover img {
+	filter: blur(4px);
+}
+
+.glass:hover .card-banner {
+	opacity: 1;
+
+	/* box-shadow: inset -18px 0px 9px -10px rgba(0, 0, 0, 0.25),
+		inset -25px 0px 2px -10px rgba(0, 0, 0, 0.25); */
+}
+
+footer {
+	width: 100%;
+	height: auto;
+	text-align: end;
+	font-size: 12px;
+}
+
+#grid-login-ilpi {
+	width: 65%;
+	height: 70vh;
+	display: flex;
+	position: absolute;
+	top: 10%;
+	bottom: 10%;
+	border-radius: 8px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	box-shadow: 12px 8px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+#login-ilpi-container {
+	display: flex;
+	width: 50%;
+	height: 100%;
+	background: #fefbe6;
+	border-radius: 0 6px 6px 0;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 0px;
+	margin-right: 50;
+	flex-wrap: wrap;
+}
+
+.side-image {
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	width: 50%;
+	height: 100%;
+}
+
+#banner-ilpi-login {
+	border-radius: 10px 0 0 10px;
+	padding: 0;
+	margin: 0;
+}
+
+.login-form {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 2em;
+	text-align: center;
+	font-size: 25px;
+}
+
+.label-form {
+	width: 50%;
+	padding: 20px;
+	padding-right: 0;
+	overflow: hidden;
+}
+
+#username {
+	background: none;
+	border-radius: 12px;
+	color: rgb(36, 31, 31);
+	width: 150px;
+	margin: 30px 30px 30px 0px;
+	border: rgb(36, 31, 31) solid 2px;
+}
+
+#user-password {
+	background: none;
+	border-radius: 12px;
+	color: rgb(36, 31, 31);
+	width: 150px;
+	margin: 30px 30px 30px 0px;
+	border: rgb(36, 31, 31) solid 2px;
+}
+
+fieldset {
+	border: none;
+	width: 100%;
+}
+
+#bt-send {
+	background: #07afa9;
+	color: #fefbe6;
+	font-size: 20px;
+	width: 130px;
+	height: 40px;
+	border-radius: 12px;
+	border: 2px solid rgb(36, 31, 31);
+}
+
+#bt-send a {
+	color: #fefbe6;
+	font-style: normal;
+	text-decoration: none;
+}
+
+#bt-send:hover {
+	background-color: #6d6d6d;
+}
+
+#ilpi-home {
+	box-sizing: border-box;
+}
+
+.ilpi {
+	position: absolute;
+	top: 5em;
+	bottom: 5em;
+	width: 65%;
+	height: 46em;
+	padding: 0;
+	margin: 0;
+	z-index: -2;
+}
+
+.ilpi header {
+	width: 100%;
+	height: 8.5em;
+	overflow: hidden;
+	border-radius: 6px 6px 0 0;
+	box-shadow: 0 5px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.ilpi h1 {
+	width: 100%;
+	font-size: 65px;
+	font-family: "Roboto Slab", serif;
+	text-decoration: underline;
+	text-decoration-thickness: 4px;
+	padding: 0.4em;
+	padding-left: 0.8em;
+	margin: 0;
+	text-align: start;
+	cursor: default;
+}
+
+.slideshow-container {
+	max-width: 1800px;
+	position: absolute;
+	top: 8.7em;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	z-index: -1;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+	z-index: 0;
+}
+
+.mySlides img {
+	border-radius: 0 0 8px 8px;
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	column-gap: 1px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+	position: relative;
+	bottom: 4em;
+	cursor: default;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: rgba(233, 233, 233, 0.048);
+	border: rgba(230, 230, 230, 0.651) solid 2px;
+	border-radius: 15%;
+	display: inline-block;
+	transition: background-color 0.6s ease-in-out;
+}
+
+.active,
+.dot:hover {
+	background-color: #353434;
+	width: 40px;
+}
+
+/* Fading animation */
+.fade {
+	animation-name: fade;
+	animation-duration: 0.4s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* The sidepanel menu */
+.sidepanel {
+	height: 35vh; /* Specify a height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: absolute; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 30%;
+	bottom: 30%;
+	left: 0;
+	background-color: rgb(255, 255, 255); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+	border-radius: 0 25px 25px 0;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+	color: #818181;
+
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+	color: #f1f1f1;
+}
+
+#opthome {
+	padding-top: 1em;
+	height: 5em;
+	width: 4em;
+}
+
+.sidepanel .options {
+	padding-left: 0;
+	width: 6em;
+}
+
+.sidepanel .options img:hover {
+	background-color: #fefbe6;
+	border-radius: 5px;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+	position: absolute;
+	left: 10%;
+	top: 0%;
+	bottom: 30%;
+	left: 33%;
+	width: 2em;
+	height: 100%;
+	font-size: 20px;
+	margin-left: 50px;
+	border-radius: 0 25px 25px 0;
+	border: none;
+	border-left: 0.5px solid black;
+	background-color: rgb(255, 255, 255);
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+	position: absolute;
+	top: 48%;
+	bottom: 48%;
+	font-size: 20px;
+	cursor: pointer;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	padding: 10px 15px;
+	border: none;
+	width: 2em;
+	height: 5em;
+	border-radius: 0 12px 12px 0;
+}
+
+.openbtn:hover {
+	background-color: #fefbe6;
+}
+
+.closebtn:hover {
+	background-color: #fefbe6;
+}
